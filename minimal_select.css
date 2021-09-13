@@ -40,9 +40,6 @@
     padding: 0.5rem 0.75rem;
     padding-left: 1rem;
 }
-.select-body li:hover {
-    background-color: #E8E8E8;
-}
 .select-head {
     background: #FFFFFF;
     border: 0.063rem solid #333333;
@@ -82,8 +79,13 @@
 .select-head.active .select-arrow-down::after {
     transform: rotate(-90deg);
 }
-.select-body li.selected, .select-body li.selected:hover {
+.select-body li.selected {
     background-color: #E8E8E8;
+}
+@media screen and (min-width: 576px) {
+    .select-body li:hover {
+        background-color: #E8E8E8;
+    }
 }
 .select-body-outer-arrow {
     display: none;
