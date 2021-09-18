@@ -64,14 +64,13 @@
     transform: rotate(90deg);
     /* remove above and set img as placeholder if you
     content: url(imgs/dropdown.svg);*/
-    margin-left: 0.625rem;
     display: block;
-    padding-top: 0.25rem;
     transition: transform .4s ease-in-out;
 }
 .select-arrow-down.image-placeholder::after {
     transform: unset;
     content: url(dropdown.svg);
+    height: 1.5rem;
 }
 .select-head.active .select-arrow-down.image-placeholder::after {
     transform: rotate(-180deg);
