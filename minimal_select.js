@@ -17,6 +17,14 @@ function search(ev, value) {
     console.log(ev);
     console.log(value);
 }
+
+function cleanSelects(valor, id) {
+    Array.prototype.slice.call(document.querySelectorAll("div.select-body[target"+ (id ? "=" + id : "") +"]")).map(el => {
+        el.firstElementChild.click();
+        el.previousElementSibling.classList.remove("active");
+        el.previousElementSibling.firstElementChild.innerHTML = valor })
+}
+
 function selectTrigger(c_tar) {
     document.querySelectorAll(select_class + "[target=" + c_tar + "] li").forEach(function (c) {
         c.addEventListener(eventType, function (ev) {
